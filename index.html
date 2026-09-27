@@ -1,1 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+<title>Vetrox Global Trade | Export & Import</title>
+
+<meta name="description"
+content="Vetrox Global Trade - Connecting Quality Products to Global Markets.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#09233f;
+  --dark:#061a30;
+  --teal:#0f8b78;
+  --gold:#d6a84f;
+  --light:#f5f8fa;
+  --line:#e3e9ee;
+  --text:#142436;
+  --muted:#687789;
+  --white:#fff;
+  --shadow:0 18px 45px rgba(6,30,50,.12);
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:"DM Sans",Arial,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button,input,textarea,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1150px,calc(100% - 32px));
+  margin:auto;
+}
+
+section{
+  padding:80px 0;
+}
+
+h1,h2,h3{
+  font-family:Manrope,Arial,sans-serif;
+  line-height:1.15;
+  color:var(--navy);
+}
+
+h1{
+  font-size:clamp(2.5rem,7vw,5rem);
+  margin:0 0 20px;
+}
+
+h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin:0 0 15px;
+}
+
+h3{
+  margin:0 0 10px;
+}
+
+p{
+  color:var(--muted);
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:13px 19px;
+  border-radius:10px;
+  border:0;
+  font-weight:700;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.primary{
+  background:var(--teal);
+  color:#fff;
+}
+
+.dark{
+  background:var(--navy);
+  color:#fff;
+}
+
+.light{
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--navy);
+}
+
+/* TOP BAR */
+
+.topbar{
+  background:var(--dark);
+  color:#dce6ee;
+  font-size:14px;
+}
+
+.topbar .container{
+  display:flex;
+  justify-content:space-between;
+  padding:9px 0;
+}
+
+/* NAVIGATION */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:Manrope;
+  font-weight:800;
+  color:var(--navy);
+}
+
+.logo img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+}
+
+.navlinks{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  font-weight:700;
+  color:#526273;
+}
+
+.navlinks a:hover{
+  color:var(--teal);
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  font-size:28px;
+}
+
+/* HERO */
+
+.hero{
+  background:
+  linear-gradient(120deg,#061a30,#0a3558 60%,#0c5b62);
+  color:#fff;
+  overflow:hidden;
+}
+
+.hero .container{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero h1{
+  color:#fff;
+}
+
+.hero h1 span{
+  color:#6fd6c5;
+}
+
+.hero p{
+  color:#d6e1ea;
+  font-size:18px;
+  max-width:650px;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:28px 0;
+}
+
+.trust{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.trust div{
+  padding:13px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  border-radius:12px;
+  font-size:13px;
+}
+
+.trust strong{
+  display:block;
+  color:#fff;
+  font-size:15px;
+}
+
+.hero-image{
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);
+}
+
+.hero-image img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+}
+
+/* SECTION TITLE */
+
+.heading{
+  max-width:700px;
+  margin-bottom:40px;
+}
+
+.eyebrow{
+  color:var(--teal);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:800;
+  font-size:13px;
+}
+
+/* ABOUT */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+  border-radius:25px;
+}
+
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:25px;
+}
+
+.check{
+  font-weight:700;
+}
+
+.check::before{
+  content:"✓";
+  color:var(--teal);
+  margin-right:8px;
+}
+
+/* PRODUCTS */
+
+.products{
+  background:var(--light);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:30px;
+}
+
+.filter{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:50px;
+  padding:9px 15px;
+  font-weight:700;
+}
+
+.filter.active{
+  background:var(--navy);
+  color:#fff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:20px;
+}
+
+.category{
+  display:inline-block;
+  padding:5px 9px;
+  background:#e5f6f2;
+  color:var(--teal);
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.meta{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:15px 0;
+}
+
+.meta span{
+  background:#f2f5f7;
+  padding:5px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+
+.card-buttons{
+  display:flex;
+  gap:8px;
+}
+
+.card-buttons .btn{
+  flex:1;
+  padding:10px;
+  font-size:13px;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.feature{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.icon{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  background:#e3f6f1;
+  color:var(--teal);
+  border-radius:12px;
+  font-size:21px;
+  margin-bottom:15px;
+}
+
+/* MARKETS */
+
+.markets{
+  background:var(--navy);
+  color:#fff;
+}
+
+.markets h2{
+  color:#fff;
+}
+
+.markets p{
+  color:#cbd8e2;
+}
+
+.market-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+
+.market{
+  padding:20px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:15px;
+  font-weight:800;
+}
+
+/* PROCESS */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+}
+
+.step-number{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+/* QUOTE */
+
+.quote{
+  background:#edf7f4;
+}
+
+.quote-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:50px;
+}
+
+form{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  margin-bottom:15px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  outline:none;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--teal);
+}
+
+.success{
+  display:none;
+  padding:15px;
+  margin-top:15px;
+  border-radius:10px;
+  background:#e3f6f1;
+  color:#146653;
+}
+
+/* FOOTER */
+
+footer{
+  background:var(--dark);
+  color:#c9d5df;
+  padding:55px 0 20px;
+}
+
+.footer{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:35px;
+}
+
+footer h3{
+  color:#fff;
+}
+
+footer a{
+  display:block;
+  margin:8px 0;
+  color:#c9d5df;
+}
+
+footer a:hover{
+  color:#6bd4c2;
+}
+
+.social{
+  display:flex;
+  gap:9px;
+  margin-top:18px;
+}
+
+.social a{
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  margin:0;
+}
+
+.copy{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:35px;
+  padding-top:20px;
+  font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25d366;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  z-index:200;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* MODAL */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:500;
+  padding:20px;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(800px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:10px;
+  border:0;
+  background:none;
+  font-size:30px;
+}
+
+.modal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.modal-grid img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:76px;
+    left:0;
+    right:0;
+    background:#fff;
+    padding:20px;
+    flex-direction:column;
+    border-bottom:1px solid var(--line);
+  }
+
+  .navlinks.open{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero .container,
+  .about,
+  .quote-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero .container{
+    padding:60px 0;
+  }
+
+  .hero-image{
+    order:-1;
+  }
+
+  .hero-image img{
+    height:350px;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .market-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .steps{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:60px 0;
+  }
+
+  .topbar .container{
+    flex-direction:column;
+    gap:2px;
+  }
+
+  .trust{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .checks,
+  .grid,
+  .features,
+  .market-grid,
+  .steps,
+  .footer,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-image img{
+    height:280px;
+  }
+
+  .about img{
+    height:320px;
+  }
+
+  .modal-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+  <div class="container">
+    <span>🇮🇳 Exporting from India to Global Markets</span>
+    <a href="mailto:vetroxglobaltrade@gmail.com">
+      vetroxglobaltrade@gmail.com
+    </a>
+  </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      <img src="logo.png" alt="Vetrox Global Trade Logo">
+      <span>VETROX GLOBAL TRADE</span>
+    </a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#markets">Markets</a>
+      <a href="#process">Process</a>
+      <a href="#quote">Request Quote</a>
+    </nav>
+
+    <button class="menu" onclick="toggleMenu()">☰</button>
+
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div>
+
+      <div class="eyebrow">GLOBAL SOURCING • EXPORT • IMPORT</div>
+
+      <h1>
+        Connecting Quality
+        <span>Products</span>
+        to Global Markets
+      </h1>
+
+      <p>
+        Vetrox Global Trade connects international buyers with
+        quality products sourced from India through reliable,
+        inquiry-led B2B trade.
+      </p>
+
+      <div class="actions">
+
+        <a href="#products" class="btn primary">
+          Explore Products
+        </a>
+
+        <a href="#quote" class="btn light">
+          Request a Quote
+        </a>
+
+      </div>
+
+      <div class="trust">
+
+        <div>
+          <strong>India</strong>
+          Export Origin
+        </div>
+
+        <div>
+          <strong>B2B</strong>
+          Bulk Supply
+        </div>
+
+        <div>
+          <strong>Global</strong>
+          Markets
+        </div>
+
+        <div>
+          <strong>Quality</strong>
+          Focused
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1200&q=85"
+        alt="International shipping containers"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container about">
+
+    <div>
+
+      <div class="eyebrow">ABOUT VETROX</div>
+
+      <h2>Reliable Trade. Global Connections.</h2>
+
+      <p>
+        Vetrox Global Trade is focused on connecting quality
+        Indian products with international buyers and businesses.
+      </p>
+
+      <p>
+        We work with an inquiry-first approach, helping buyers
+        discuss products, quantities, packaging, pricing,
+        documentation and shipping requirements.
+      </p>
+
+      <div class="checks">
+
+        <div class="check">India-based sourcing</div>
+        <div class="check">Bulk B2B inquiries</div>
+        <div class="check">Flexible packaging</div>
+        <div class="check">International buyers</div>
+
+      </div>
+
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d8?auto=format&fit=crop&w=1000&q=85"
+      alt="Global logistics and cargo"
+      loading="lazy"
+    >
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <div class="eyebrow">PRODUCT CATEGORIES</div>
+
+      <h2>Products for Global Buyers</h2>
+
+      <p>
+        Explore selected product categories available for
+        wholesale and export inquiries.
+      </p>
+
+    </div>
+
+    <div class="filters" id="filters"></div>
+
+    <div class="grid" id="productGrid"></div>
+
+  </div>
+
+</section>
+
+<!-- WHY US -->
+
+<section>
+
+  <div class="container">
+
+    <div class="heading">
+
+      <div class="eyebrow">WHY VETROX</div>
+
+      <h2>Built Around Business Requirements</h2>
+
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="icon">🌍</div>
+        <h3>Global Reach</h3>
+        <p>
+          Supporting inquiries from buyers across international markets.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">📦</div>
+        <h3>Bulk Supply</h3>
+        <p>
+          Product quantities, packaging and MOQ can be discussed according
+          to buyer requirements.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🤝</div>
+        <h3>Direct Communication</h3>
+        <p>
+          Contact us directly through email, WhatsApp or Instagram.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MARKETS -->
+
+<section class="markets" id="markets">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <div class="eyebrow">GLOBAL MARKETS</div>
+
+      <h2>Serving International Buyers</h2>
+
+      <p>
+        We welcome inquiries from importers, distributors,
+        wholesalers, retailers and sourcing companies.
+      </p>
+
+    </div>
+
+    <div class="market-grid">
+
+      <div class="market">🇦🇪 UAE</div>
+      <div class="market">🇸🇦 Saudi Arabia</div>
+      <div class="market">🇺🇸 USA</div>
+      <div class="market">🇬🇧 UK</div>
+      <div class="market">🇪🇺 Europe</div>
+      <div class="market">🇨🇦 Canada</div>
+      <div class="market">🇦🇺 Australia</div>
+      <div class="market">🇿🇦 Africa</div>
+      <div class="market">🌏 Asia</div>
+      <div class="market">🌍 Worldwide</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <div class="eyebrow">EXPORT PROCESS</div>
+
+      <h2>Simple Inquiry to Shipment</h2>
+
+    </div>
+
+    <div class="steps">
+
+      <div>
+        <div class="step-number">1</div>
+        <h3>Inquiry</h3>
+        <p>Tell us what products you need.</p>
+      </div>
+
+      <div>
+        <div class="step-number">2</div>
+        <h3>Discussion</h3>
+        <p>Discuss quantity, packaging and requirements.</p>
+      </div>
+
+      <div>
+        <div class="step-number">3</div>
+        <h3>Quotation</h3>
+        <p>Receive product and shipping quotation.</p>
+      </div>
+
+      <div>
+        <div class="step-number">4</div>
+        <h3>Confirmation</h3>
+        <p>Finalize order specifications.</p>
+      </div>
+
+      <div>
+        <div class="step-number">5</div>
+        <h3>Shipment</h3>
+        <p>Coordinate documentation and shipment.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote" id="quote">
+
+  <div class="container quote-grid">
+
+    <div>
+
+      <div class="eyebrow">REQUEST A QUOTE</div>
+
+      <h2>Tell Us What You Need</h2>
+
+      <p>
+        Submit your requirements and our team will contact you
+        regarding product availability, quantity, pricing and
+        shipping options.
+      </p>
+
+      <p>
+        📧 vetroxglobaltrade@gmail.com
+      </p>
+
+      <p>
+        📱 WhatsApp available for direct inquiries.
+      </p>
+
+      <a
+        class="btn primary"
+        href="https://wa.me/919876543210"
+        target="_blank"
+      >
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+    <form
+      id="quoteForm"
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+    >
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label>Name *</label>
+          <input
+            name="name"
+            required
+            placeholder="Your name"
+          >
+        </div>
+
+        <div class="field">
+          <label>Company</label>
+          <input
+            name="company"
+            placeholder="Company name"
+          >
+        </div>
+
+        <div class="field">
+          <label>Email *</label>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="your@email.com"
+          >
+        </div>
+
+        <div class="field">
+          <label>Phone / WhatsApp *</label>
+          <input
+            name="phone"
+            required
+            placeholder="+91..."
+          >
+        </div>
+
+        <div class="field">
+          <label>Country</label>
+          <input
+            name="country"
+            placeholder="Your country"
+          >
+        </div>
+
+        <div class="field">
+          <label>Product</label>
+
+          <select name="product" id="productSelect">
+
+            <option value="">
+              Select product
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="field">
+          <label>Quantity</label>
+          <input
+            name="quantity"
+            placeholder="e.g. 500 kg"
+          >
+        </div>
+
+        <div class="field">
+          <label>Destination</label>
+          <input
+            name="destination"
+            placeholder="Country / Port"
+          >
+        </div>
+
+        <div class="field full">
+
+          <label>Message</label>
+
+          <textarea
+            name="message"
+            placeholder="Tell us your product requirements..."
+          ></textarea>
+
+        </div>
+
+      </div>
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Vetrox Global Trade Inquiry"
+      >
+
+      <button
+        class="btn primary"
+        type="submit"
+        style="width:100%"
+      >
+        Send Inquiry →
+      </button>
+
+      <div
+        class="success"
+        id="success"
+      >
+        Thank you! Your inquiry has been submitted.
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer">
+
+      <div>
+
+        <h3>Vetrox Global Trade</h3>
+
+        <p>
+          Connecting quality products to global markets
+          through inquiry-led B2B trade.
+        </p>
+
+        <div class="social">
+
+          <a
+            href="https://wa.me/919876543210"
+            target="_blank"
+            title="WhatsApp"
+          >
+            WA
+          </a>
+
+          <a
+            href="mailto:vetroxglobaltrade@gmail.com"
+            title="Email"
+          >
+            @
+          </a>
+
+          <a
+            href="https://www.instagram.com/vetrox_global_trade/"
+            target="_blank"
+            title="Instagram"
+          >
+            IG
+          </a>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#markets">Markets</a>
+        <a href="#process">Process</a>
+
+      </div>
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <a href="mailto:vetroxglobaltrade@gmail.com">
+          Email
+        </a>
+
+        <a href="https://wa.me/919876543210" target="_blank">
+          WhatsApp
+        </a>
+
+        <a
+          href="https://www.instagram.com/vetrox_global_trade/"
+          target="_blank"
+        >
+          Instagram
+        </a>
+
+      </div>
+
+      <div>
+
+        <h3>Location</h3>
+
+        <p>
+          Ahmedabad, Gujarat, India
+        </p>
+
+        <p>
+          Exporting Quality.<br>
+          Building Global Partnerships.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="copy">
+      © 2026 Vetrox Global Trade. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/919876543210"
+  target="_blank"
+  aria-label="WhatsApp"
+>
+  ☎
+</a>
+
+<!-- PRODUCT MODAL -->
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeModal()"
+    >
+      ×
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+<script>
+
+const products = [
+
+  {
+    id:1,
+    name:"Indian Basmati Rice",
+    category:"Agricultural",
+    image:"https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=900&q=80",
+    desc:"Premium long-grain Indian basmati rice for international buyers.",
+    moq:"500 kg"
+  },
+
+  {
+    id:2,
+    name:"Turmeric Powder",
+    category:"Spices",
+    image:"https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=900&q=80",
+    desc:"Quality turmeric powder suitable for wholesale and export.",
+    moq:"100 kg"
+  },
+
+  {
+    id:3,
+    name:"Whole Red Chilli",
+    category:"Spices",
+    image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80",
+    desc:"Sourced red chilli products for international food markets.",
+    moq:"100 kg"
+  },
+
+  {
+    id:4,
+    name:"Green Cardamom",
+    category:"Spices",
+    image:"https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80",
+    desc:"Aromatic green cardamom for wholesale buyers.",
+    moq:"50 kg"
+  },
+
+  {
+    id:5,
+    name:"Dehydrated Onion Flakes",
+    category:"Food",
+    image:"https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=900&q=80",
+    desc:"Dehydrated onion flakes for commercial food processing.",
+    moq:"250 kg"
+  },
+
+  {
+    id:6,
+    name:"Cotton Fabric",
+    category:"Textiles",
+    image:"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80",
+    desc:"Cotton fabric sourcing for apparel and textile buyers.",
+    moq:"1000 m"
+  },
+
+  {
+    id:7,
+    name:"Jute Shopping Bags",
+    category:"Textiles",
+    image:"https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80",
+    desc:"Reusable jute bags for retail and promotional orders.",
+    moq:"1000 pcs"
+  },
+
+  {
+    id:8,
+    name:"Stainless Steel Housewares",
+    category:"Industrial",
+    image:"https://images.unsplash.com/photo-1583845112203-454cfae6b1f7?auto=format&fit=crop&w=900&q=80",
+    desc:"Stainless-steel household products for wholesale buyers.",
+    moq:"500 pcs"
+  },
+
+  {
+    id:9,
+    name:"Coconut Products",
+    category:"Food",
+    image:"https://images.unsplash.com/photo-1441492207165-2e3f6e3c1d0d?auto=format&fit=crop&w=900&q=80",
+    desc:"Coconut-based products available for bulk sourcing.",
+    moq:"250 kg"
+  },
+
+  {
+    id:10,
+    name:"Groundnut / Peanuts",
+    category:"Agricultural",
+    image:"https://images.unsplash.com/photo-1567892737950-30c2d3e1c8f4?auto=format&fit=crop&w=900&q=80",
+    desc:"Quality-sourced peanuts for food and wholesale buyers.",
+    moq:"500 kg"
+  },
+
+  {
+    id:11,
+    name:"Sesame Seeds",
+    category:"Agricultural",
+    image:"https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80",
+    desc:"Natural sesame seeds for food and oil applications.",
+    moq:"500 kg"
+  },
+
+  {
+    id:12,
+    name:"Paper Packaging Products",
+    category:"Industrial",
+    image:"https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80",
+    desc:"Commercial packaging products for bulk buyers.",
+    moq:"1000 pcs"
+  }
+
+];
+
+const categories = [
+  "All",
+  "Agricultural",
+  "Food",
+  "Spices",
+  "Textiles",
+  "Industrial"
+];
+
+const grid =
+  document.getElementById("productGrid");
+
+const filters =
+  document.getElementById("filters");
+
+const productSelect =
+  document.getElementById("productSelect");
+
+
+/* CATEGORY FILTERS */
+
+function createFilters(){
+
+  filters.innerHTML =
+    categories.map((category,index)=>`
+
+      <button
+        class="filter ${index===0?"active":""}"
+        onclick="filterProducts('${category}',this)"
+      >
+        ${category}
+      </button>
+
+    `).join("");
+
+}
+
+
+/* PRODUCTS */
+
+function renderProducts(category="All"){
+
+  const list =
+    category==="All"
+    ? products
+    : products.filter(
+        product=>product.category===category
+      );
+
+  grid.innerHTML =
+    list.map(product=>`
+
+      <article class="card">
+
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          loading="lazy"
+        >
+
+        <div class="card-body">
+
+          <span class="category">
+            ${product.category}
+          </span>
+
+          <h3>
+            ${product.name}
+          </h3>
+
+          <p>
+            ${product.desc}
+          </p>
+
+          <div class="meta">
+            <span>MOQ: ${product.moq}</span>
+            <span>Origin: India</span>
+          </div>
+
+          <div class="card-buttons">
+
+            <button
+              class="btn dark"
+              onclick="viewProduct(${product.id})"
+            >
+              View Details
+            </button>
+
+            <button
+              class="btn light"
+              onclick="whatsappProduct(${product.id})"
+            >
+              WhatsApp
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    `).join("");
+
+}
+
+
+/* FILTER */
+
+function filterProducts(category,button){
+
+  document
+    .querySelectorAll(".filter")
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  renderProducts(category);
+
+}
+
+
+/* PRODUCT SELECT */
+
+function createProductSelect(){
+
+  productSelect.innerHTML =
+    `<option value="">Select product</option>`+
+    products.map(product=>
+      `<option value="${product.name}">
+        ${product.name}
+      </option>`
+    ).join("");
+
+}
+
+
+/* WHATSAPP */
+
+function whatsappProduct(id){
+
+  const product =
+    products.find(p=>p.id===id);
+
+  const message =
+`Hello Vetrox Global Trade,
+
+I am interested in:
+${product.name}
+
+Please share:
+• Export price
+• MOQ
+• Packaging options
+• Shipping details
+
+Thank you.`;
+
+  const url =
+    "https://wa.me/919876543210?text="+
+    encodeURIComponent(message);
+
+  window.open(url,"_blank");
+
+}
+
+
+/* PRODUCT MODAL */
+
+function viewProduct(id){
+
+  const product =
+    products.find(p=>p.id===id);
+
+  document.getElementById("modalContent").innerHTML=`
+
+    <div class="modal-grid">
+
+      <img
+        src="${product.image}"
+        alt="${product.name}"
+      >
+
+      <div>
+
+        <span class="category">
+          ${product.category}
+        </span>
+
+        <h2>
+          ${product.name}
+        </h2>
+
+        <p>
+          ${product.desc}
+        </p>
+
+        <div class="meta">
+          <span>MOQ: ${product.moq}</span>
+          <span>Origin: India</span>
+        </div>
+
+        <p>
+          Contact Vetrox Global Trade for availability,
+          specifications, packaging, pricing and shipping
+          requirements.
+        </p>
+
+        <div class="actions">
+
+          <a
+            class="btn primary"
+            href="#quote"
+            onclick="closeModal()"
+          >
+            Request Quote
+          </a>
+
+          <button
+            class="btn light"
+            onclick="whatsappProduct(${product.id})"
+          >
+            WhatsApp
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+  document
+    .getElementById("modal")
+    .classList.add("show");
+
+}
+
+
+function closeModal(){
+
+  document
+    .getElementById("modal")
+    .classList.remove("show");
+
+}
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+  document
+    .getElementById("navlinks")
+    .classList.toggle("open");
+
+}
+
+
+/* FORM */
+
+document
+  .getElementById("quoteForm")
+  .addEventListener("submit",function(){
+
+    setTimeout(()=>{
+
+      document
+        .getElementById("success")
+        .style.display="block";
+
+    },500);
+
+  });
+
+
+/* CLOSE MODAL OUTSIDE */
+
+document
+  .getElementById("modal")
+  .addEventListener("click",function(e){
+
+    if(e.target===this){
+      closeModal();
+    }
+
+  });
+
+
+/* START */
+
+createFilters();
+renderProducts();
+createProductSelect();
+
+</script>
+
+</body>
+</html>
